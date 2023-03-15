@@ -102,7 +102,7 @@ This can be intimidating, but have no fear, Git is smart when it comes to mergin
   Define terms and link to docs.github.com.
 -->
 
-<details id=3>
+<details id=3 open>
 <summary><h2>Step 3: Create your own conflict</h2></summary>
 
 _Good job! You've solved a merge conflict! :tada:_
