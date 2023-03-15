@@ -5,6 +5,35 @@
   Add your open source license, GitHub uses Creative Commons Attribution 4.0 International.
 -->
 
+# Chris's review of this content
+This repo is created from a "template" repository, and employs Github Actions to do some stuff after it's cloned, as well as throughout the exercise.
+- "We recommend creating a public repository—private repositories will use Actions minutes."
+- There are four steps, and a workflow for each step.
+- A github.com/skills/action-update-step action maintains the current step in a .github/script/STEP file, and also maintains "open" or "close" attributes on the README (which is cute, but unnecessary).
+   - Step-0 
+      - Triggered by a push to `main` (which happens when the repo is created from a template).
+      - Creates a 'my-resume' branch, makes a change to resume.md, and pushes it (so the student can create a PR from it); then updates STEP in `my-resume` branch to 1.
+   - Step-1
+      - Triggered when a pull request is opened.
+      - Creates a merge conflict by changing/pushing my-resume.md in `main`; then updates STEP in the my-resume branch to 2.
+   - Step-2
+      - Triggered by a push to `my-resume`.
+      - Checks out `main` , creates `references.md` with some content, and commits/pushes; then updates STEP in the my-resume branch to 3.
+   - Step-3 
+      - Triggered by a push of `references.md` to `my-resume`.
+      - Only updates STEP in the my-resume branch to 4 (and opens next details dropdown).
+   - Step-4 
+      - Triggered by a push to `main`.
+      - Only updates STEP in the my-resume branch to X (and opens next details dropdown).
+ 
+## Analysis:  At first, the use of github actions seems cool...
+- But in fact it gets in the way by adding a great deal of useless magic to a process that is already challenging to understand, as well as cluttering the git history with commits we didn't make and therefore shouldn't have to see.
+- Also, it does everything in the browser, so no practice/experience with the git graph nor git commands.
+
+## Summary:  Not an appropriate tool for learning how git works.  Might have tutorial value for teaching Github Actions.
+- Students will learn more by simply creating a merge collision themselves, and then using the PR process to resolve it.
+- Also, resolving a PR doesn't necessarily imply dealing with a merge collision as well;  these two concepts are needlessly conflated.
+
 # Resolve merge conflicts
 
 _Learn why conflicts happen and how to resolve them._
