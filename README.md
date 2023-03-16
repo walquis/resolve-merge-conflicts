@@ -6,7 +6,7 @@
 -->
 
 # Chris's review of this content
-This repo is created from a "template" repository, and employs Github Actions to do some stuff after it's cloned, as well as throughout the exercise.
+This repo is created from a "template" repository of [Github's "resolve merge conflicts" skills teaching repo](https://github.com/skills/resolve-merge-conflicts) (Click the "Start Course" button), and employs Github Actions to update branches after it's cloned, as well as throughout the exercise.
 - "We recommend creating a public repository—private repositories will use Actions minutes."
 - There are four steps, and a workflow for each step.
 - A github.com/skills/action-update-step action maintains the current step in a .github/script/STEP file, and also maintains "open" or "close" attributes on the README (which is cute, but unnecessary).
